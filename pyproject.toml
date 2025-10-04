@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jira-ticket-meta-parser"
+version = "1.0.0"
+description = "Production-ready JIRA ticket validator and ML-based backlog ranker"
+authors = [{name = "AI Whisperers"}]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24.0,<2.0.0",
+    "pandas>=2.0.0",
+    "pyarrow>=12.0.0",
+    "sentence-transformers>=2.2.0",
+    "faiss-cpu>=1.7.4",
+    "lightgbm>=4.0.0",
+    "lxml>=4.9.0",
+    "html2text>=2020.1.16",
+    "beautifulsoup4>=4.12.0",
+    "pyyaml>=6.0",
+    "python-dateutil>=2.8.0",
+    "click>=8.1.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-benchmark>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.scripts]
+jira-validate = "src.cli.prod:main"
+jira-dev = "src.cli.dev:main"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

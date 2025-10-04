@@ -1,0 +1,192 @@
+# JIRA Ticket Meta Parser - Default Configuration
+# DO NOT hardcode values in code - all parameters live here
+
+# Backbone Validator
+validator:
+  # Key format validation
+  key_regex: "^[A-Z][A-Z0-9_]+-\\d+$"
+
+  # Date format allowlist (in order of priority)
+  date_formats:
+    - "%a, %d %b %Y %H:%M:%S %z"  # RFC-822: Thu, 18 Sep 2025 14:36:50 -0600
+    - "%Y-%m-%dT%H:%M:%S.%f%z"     # ISO-8601 with ms
+    - "%Y-%m-%dT%H:%M:%S%z"        # ISO-8601
+    - "%a %b %d %H:%M:%S %Z %Y"    # Jira textual: Thu Sep 18 23:15:24 UTC 2025
+
+  # Required fields (fail-fast if missing)
+  required_fields:
+    - key
+    - summary
+    - type
+    - status
+    - priority
+    - created
+    - updated
+
+  # Optional recognized fields
+  optional_fields:
+    - description
+    - assignee
+    - reporter
+    - labels
+    - components
+    - parent
+    - epic_link
+    - sprint
+    - rank
+    - issuelinks
+
+  # Link integrity policy
+  link_policy: "strict"  # strict | allow_external
+
+  # CSV column mapping (Jira standard export)
+  csv_column_mapping:
+    "Issue key": "key"
+    "Summary": "summary"
+    "Issue Type": "type"
+    "Status": "status"
+    "Priority": "priority"
+    "Created": "created"
+    "Updated": "updated"
+    "Assignee": "assignee"
+    "Reporter": "reporter"
+    "Components": "components"
+    "Labels": "labels"
+    "Parent": "parent"
+    "Epic Link": "epic_link"
+    "Sprint": "sprint"
+    "Rank": "rank"
+    "Description": "description"
+
+# Feature Extraction
+features:
+  # HTML cleaning
+  strip_html: true
+  unescape_entities: true
+
+  # Text preprocessing
+  max_summary_len: 500
+  max_description_len: 5000
+
+  # Categorical anchors for one-hot encoding
+  categorical_fields:
+    - type
+    - status
+    - priority
+
+# Embeddings (all-MiniLM-L6-v2)
+embeddings:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  model_path: "./models/model-files/all-MiniLM-L6-v2"  # Local cache
+  dimension: 384
+  pooling: "mean"
+  normalize_l2: true
+  batch_size: 32
+  device: "cpu"  # cpu | cuda
+
+# FAISS Index (IVF-PQ)
+faiss:
+  index_type: "IVF-PQ"
+  nlist: 4096           # Coarse quantizer clusters
+  m: 16                 # PQ sub-vectors
+  nbits: 8              # Bits per sub-vector
+  nprobe: 16            # Query-time clusters to scan
+  top_k: 100            # Candidates per group
+  use_gpu: false        # Set true if faiss-gpu installed
+
+# Learning-to-Rank (LightGBM LambdaMART)
+ranker:
+  objective: "lambdarank"
+  metric: "ndcg"
+  label_gain: [0, 1, 3, 7]  # Relevance levels
+
+  # Model hyperparameters
+  num_leaves: 31
+  learning_rate: 0.06
+  n_estimators: 500
+  min_data_in_leaf: 20
+  feature_fraction: 0.8
+  bagging_fraction: 0.8
+  bagging_freq: 5
+
+  # Grouping (for ranking within context)
+  group_by: "epic"  # epic | sprint | null
+
+  # Evaluation metrics
+  eval_at: [10, 20, 50]
+
+  # Weak labeling (if no ground truth)
+  weak_labels:
+    enabled: true
+    priority_weight: 0.4
+    status_weight: 0.3
+    hygiene_weight: 0.3
+
+# Optional Re-ranking (ColBERT-v2)
+reranker:
+  enabled: false  # Set true to enable
+  model_path: "./models/model-files/colbertv2.0"
+  top_k: 50  # Only re-rank top-K from LTR
+  blend_weight: 0.7  # final_score = blend_weight * ltr + (1-blend) * colbert
+  device: "cpu"
+
+# Guardrails (post-ranking business rules)
+guardrails:
+  enabled: true
+  rules:
+    - name: "missing_ac_demote"
+      condition: "flag_missing_ac == 1"
+      action: "demote_below_siblings_with_ac"
+
+    - name: "incomplete_ticket_demote"
+      condition: "assignee_empty == 1 or storypoints_empty == 1"
+      action: "demote_behind_complete_siblings"
+
+    - name: "blocked_ticket_cap"
+      condition: "status in ['Blocked', 'On Hold']"
+      action: "cap_rank_at_10th_percentile"
+
+    - name: "critical_bug_boost"
+      condition: "type == 'Bug' and priority in ['High', 'Critical']"
+      action: "minimum_rank_uplift"
+
+# Artifacts & Outputs
+artifacts:
+  base_dir: "./artifacts"
+  outputs:
+    validation_report: "validation/backbone_report.csv"
+    validation_summary: "validation/backbone_summary.json"
+    features: "features/variability_features.parquet"
+    embeddings: "embeddings/embeddings.parquet"
+    faiss_index: "indices/faiss_index.ivf"
+    ltr_model: "models/ltr_model.txt"
+    feature_map: "models/feature_map.json"
+    clean_backlog: "backlogs/clean_backlog.csv"
+
+  # Versioning (hash-based)
+  version_artifacts: true
+
+# Logging & Benchmarking
+logging:
+  level: "INFO"  # DEBUG | INFO | WARNING | ERROR
+  format: "structured"  # structured | simple
+  log_dir: "./logs"
+  log_file: "pipeline.log"
+
+  # Benchmark tracking
+  track_performance: true
+  benchmark_dir: "./benchmarks"
+  metrics_to_track:
+    - stage_duration
+    - memory_usage
+    - ndcg_at_k
+    - kendall_tau
+    - recall_at_k
+
+# Performance & Quality Targets
+targets:
+  max_processing_time_sec: 300  # 5 min for 50k tickets
+  min_faiss_recall: 0.95
+  min_ndcg_at_10: 0.85
+  min_pm_approval_at_20: 0.80
+  min_kendall_tau: 0.60
