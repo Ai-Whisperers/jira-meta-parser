@@ -52,10 +52,12 @@ validator:
     "Reporter": "reporter"
     "Components": "components"
     "Labels": "labels"
-    "Parent": "parent"
-    "Epic Link": "epic_link"
-    "Sprint": "sprint"
-    "Rank": "rank"
+    "Parent key": "parent"                               # FIXED - actual CSV column name
+    "Custom field (Epic Name)": "epic_link"              # NEW - from actual data
+    "Custom field (Story Points)": "story_points"        # NEW - for hygiene scoring
+    "Custom field (Rank)": "rank"                        # NEW - from actual data
+    "Custom field (Team)": "team"                        # NEW - for grouping
+    "Custom field (Perceived Value)": "perceived_value"  # NEW - future enhancement
     "Description": "description"
 
 # Feature Extraction
@@ -118,9 +120,9 @@ ranker:
   # Weak labeling (if no ground truth)
   weak_labels:
     enabled: true
-    priority_weight: 0.4
-    status_weight: 0.3
-    hygiene_weight: 0.3
+    priority_weight: 0.2  # REDUCED - low variance in data (90% Medium)
+    status_weight: 0.4    # INCREASED - now properly mapped with full coverage
+    hygiene_weight: 0.4   # INCREASED - high differentiation potential
     # Custom scoring maps (optional)
     priority_scores:
       critical: 4.0
@@ -130,10 +132,16 @@ ranker:
       low: 1.0
       lowest: 0.5
     status_scores:
-      "in progress": 4.0
-      "to do": 3.0
-      backlog: 2.0
-      blocked: 1.0
+      # Optimized for actual data (from DATA_ANALYSIS_REPORT.md)
+      "in progress": 4.0        # Active work (21%)
+      "deploy": 4.0              # Deployment stage (1%)
+      "user testing": 3.5        # Near completion (9%)
+      "approved to start": 3.0   # Ready for work (5%)
+      "in evaluation": 2.5       # Under review (19%)
+      "backlog": 2.0             # Queued (23%)
+      "rejected": 1.0            # Low priority (5%)
+      "blocked": 1.0             # Impediment (3%)
+      "done": 0.0                # Completed - no ranking needed (14%)
 
 # Data Preprocessing & Augmentation
 preprocessing:

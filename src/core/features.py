@@ -115,13 +115,14 @@ class FeatureExtractor:
         desc = row.get("description") or ""
         flags["flag_missing_ac"] = 1 if len(desc.strip()) < 20 else 0
 
-        # Missing assignee
-        flags["assignee_empty"] = 1 if not row.get("assignee") else 0
+        # Missing assignee (check for "Unassigned" or empty)
+        assignee = row.get("assignee") or ""
+        flags["assignee_empty"] = 1 if not assignee or "unassigned" in assignee.lower() else 0
 
-        # Missing story points (common custom field, not in backbone)
-        # Since we don't have direct access, we flag if customfield_count is 0
-        # In production, you'd check specific custom field IDs
-        flags["storypoints_empty"] = 1 if row.get("customfield_count", 0) == 0 else 0
+        # Missing story points - IMPROVED to check actual Story Points field
+        # Supports both direct story_points field and customfield IDs
+        story_points = row.get("story_points") or row.get("customfield_10016") or ""
+        flags["storypoints_empty"] = 1 if not str(story_points).strip() or str(story_points) == "0" else 0
 
         return flags
 

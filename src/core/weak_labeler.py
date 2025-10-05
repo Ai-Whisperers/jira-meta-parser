@@ -188,6 +188,10 @@ class WeakLabeler:
         )
         df.loc[mask_critical_bug, "relevance_score"] = df.loc[mask_critical_bug, "relevance_score"] + 0.5
 
+        # Improvements get slight boost (similar to stories but lower priority)
+        mask_improvement = df["type"].str.lower() == "improvement"
+        df.loc[mask_improvement, "relevance_score"] = df.loc[mask_improvement, "relevance_score"] + 0.3
+
         # Blocked/On Hold tickets get capped at lower percentile
         mask_blocked = df["status"].str.lower().isin(["blocked", "on hold"])
         df.loc[mask_blocked, "relevance_score"] = df.loc[mask_blocked, "relevance_score"] * 0.3
