@@ -16,6 +16,7 @@ local-reports/
 artifacts/
 benchmarks/
 logs/
+variations/
 
 # ==================================================
 # Python

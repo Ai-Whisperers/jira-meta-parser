@@ -121,6 +121,28 @@ ranker:
     priority_weight: 0.4
     status_weight: 0.3
     hygiene_weight: 0.3
+    # Custom scoring maps (optional)
+    priority_scores:
+      critical: 4.0
+      highest: 4.0
+      high: 3.0
+      medium: 2.0
+      low: 1.0
+      lowest: 0.5
+    status_scores:
+      "in progress": 4.0
+      "to do": 3.0
+      backlog: 2.0
+      blocked: 1.0
+
+# Data Preprocessing & Augmentation
+preprocessing:
+  enabled: false  # Set true to enable data augmentation
+  augmentation_factor: 2  # How many variations per issue (1-5)
+  text_perturbation: true
+  priority_shuffle: true
+  status_variation: true
+  output_dir: "./variations"
 
 # Optional Re-ranking (ColBERT-v2)
 reranker:
@@ -158,6 +180,7 @@ artifacts:
     validation_summary: "validation/backbone_summary.json"
     features: "features/variability_features.parquet"
     embeddings: "embeddings/embeddings.parquet"
+    weak_labels: "labels/weak_labels.csv"
     faiss_index: "indices/faiss_index.ivf"
     ltr_model: "models/ltr_model.txt"
     feature_map: "models/feature_map.json"

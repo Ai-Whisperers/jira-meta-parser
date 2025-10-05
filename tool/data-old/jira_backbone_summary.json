@@ -1,0 +1,29 @@
+{
+  "file": "/mnt/data/JIRA.xml",
+  "issues_count": 602,
+  "missing_required_count": 0,
+  "bad_key_format_count": 0,
+  "bad_dates_count": 0,
+  "link_reference_errors": 0,
+  "unique_keys_count": 602,
+  "schema_backbone": {
+    "required_fields": [
+      "key",
+      "summary",
+      "type",
+      "status",
+      "priority",
+      "created",
+      "updated"
+    ],
+    "optional_fields": [
+      "description",
+      "reporter",
+      "assignee",
+      "labels",
+      "components",
+      "customfields",
+      "issuelinks"
+    ]
+  }
+}

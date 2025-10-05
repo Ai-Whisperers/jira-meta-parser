@@ -9,9 +9,11 @@ from .core import (
     create_embedder,
     create_feature_extractor,
     create_indexer,
+    create_preprocessor,
     create_ranker,
     create_reranker,
     create_validator,
+    create_weak_labeler,
 )
 from .utils import ArtifactManager, StructuredLogger, benchmark_stage, create_logger
 
@@ -32,6 +34,8 @@ class JIRAPipeline:
         # Initialize components
         self.validator = create_validator(config)
         self.feature_extractor = create_feature_extractor(config)
+        self.weak_labeler = create_weak_labeler(config)
+        self.preprocessor = create_preprocessor(config)
         self.embedder = create_embedder(config)
         self.indexer = create_indexer(config)
         self.ranker = create_ranker(config)
@@ -77,13 +81,24 @@ class JIRAPipeline:
         # Stage 2: Feature Extraction
         features_df = self._run_feature_extraction(input_path, input_format)
 
-        # Stage 3: Embeddings
+        # Stage 3: Weak Labeling (if enabled)
+        weak_labels_df = None
+        weak_labels_cfg = self.config.get("ranker", {}).get("weak_labels", {})
+        if weak_labels_cfg.get("enabled", False):
+            weak_labels_df = self._run_weak_labeling(features_df, report_df)
+
+        # Stage 4: Preprocessing/Augmentation (if enabled)
+        preprocessing_cfg = self.config.get("preprocessing", {})
+        if preprocessing_cfg.get("enabled", False):
+            features_df, weak_labels_df = self._run_preprocessing(features_df, weak_labels_df)
+
+        # Stage 5: Embeddings
         embeddings_df = self._run_embeddings(features_df)
 
-        # Stage 4: FAISS Indexing (optional, for retrieval)
+        # Stage 6: FAISS Indexing (optional, for retrieval)
         self._run_indexing(embeddings_df)
 
-        # Stage 5: Ranking
+        # Stage 7: Ranking
         if not skip_training:
             # In production, you'd have labels here
             # For now, we'll use weak labels or skip training
@@ -167,6 +182,42 @@ class JIRAPipeline:
 
         self.logger.info("Feature extraction completed", features_count=len(features_df))
         return features_df
+
+    @benchmark_stage(stage_name="weak_labeling")
+    def _run_weak_labeling(self, features_df: pd.DataFrame, validation_df: pd.DataFrame):
+        """Run weak labeling stage."""
+        self.logger.info("Running weak labeling stage")
+
+        weak_labels_df = self.weak_labeler.generate_labels(features_df, validation_df)
+
+        # Save artifacts
+        self.artifacts.save_dataframe(
+            weak_labels_df,
+            category="labels",
+            name="weak_labels",
+            format="csv",
+        )
+
+        self.logger.info("Weak labeling completed", labels_count=len(weak_labels_df))
+        return weak_labels_df
+
+    @benchmark_stage(stage_name="preprocessing")
+    def _run_preprocessing(
+        self, features_df: pd.DataFrame, labels_df: Optional[pd.DataFrame]
+    ):
+        """Run preprocessing/augmentation stage."""
+        self.logger.info("Running preprocessing/augmentation stage")
+
+        augmented_features, augmented_labels = self.preprocessor.augment_dataset(
+            features_df, labels_df
+        )
+
+        self.logger.info(
+            "Preprocessing completed",
+            original_count=len(features_df),
+            augmented_count=len(augmented_features),
+        )
+        return augmented_features, augmented_labels
 
     @benchmark_stage(stage_name="embeddings")
     def _run_embeddings(self, features_df: pd.DataFrame):

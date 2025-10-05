@@ -1,0 +1,603 @@
+key,summary,type,status,priority,created_ok,updated_ok,dates_ok,required_ok,key_format_ok,unique_key_ok,link_ref_errors
+DF-792,"Add Service Principals for MMS, Energy Aspects, Argus, Blather, WoodMac, and Keyera Price Deck.",Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-791,Bugs from testing DF-690 Missing Emissions meta-data,Bug,In Progress,Medium,True,True,True,True,True,True,0
+DF-790,Validate Groups Against Rules,Story,In Progress,High,True,True,True,True,True,True,0
+DF-789,Ingest TIPS-Q2 Meter Mapping Table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-788,Missing Blather Spreads,Bug,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-787,Spread Name Change,Bug,In Evaluation,Low,True,True,True,True,True,True,0
+DF-786,Missing Unit Conversions,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-785,Blather ingestion capturing only 2 out of 10 products,Bug,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-784,RBOB Location Filter Fix,Bug,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-783,Create a service principal for downloading the .xls. file from  inbox,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-782,Add UOM column to the Meter Hierarchy table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-781,Create eONE gold tables,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-780,Develop gold_measurement.op_data_quantity_daily table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-779,Develop gold_measurement.op_data_quantity_minute table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-778,Bug ticket for Rimbey Compliance Summary Not Adding Up for Certain Months,Bug,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-777,Measurement & Analytics - Quality Data,Epic,Backlog,High,True,True,True,True,True,True,0
+DF-776,Create Ingestion Pipeline Using gDC Data,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-775,Create Databricks Dashboard,Task,Done,Low,True,True,True,True,True,True,0
+DF-774,Creating dashboard displaying WCSB facility data and an ingestion pipeline to automatically update dashboard data,Epic,In Progress,Medium,True,True,True,True,True,True,0
+DF-773,Measurement & Analytics - Quality - Quality Accounting,Story,Backlog,High,True,True,True,True,True,True,0
+DF-772,In Databricks show the last susccessful sql replication,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-771,Ingesting time and processing Schedule,Story,In Progress,High,True,True,True,True,True,True,0
+DF-770,Apply metadata and documentation,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-769,Create keyera_enterprise_*.gold_measurement.operational_data_quantity_daily table,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-768,1 - Develop Solution design,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-767,0 - Document Business Requirements,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-766,Create Operational Data Quantity - Daily table,Epic,Backlog,High,True,True,True,True,True,True,0
+DF-765,Apply metadata and documentation,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-764,Create keyera_enterprise_*.gold_measurement.operational_data_quantity_minute table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-763,1 - Develop Solution design,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-762,0 - Document Business Requirements,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-760,0 - Document business requirements,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-759,Dashboards do not run on Schedule when assigned to TerraForm created Compute,Bug,Rejected,Medium,True,True,True,True,True,True,0
+DF-758,Blather - Inbox file upload automation,Sub-task,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-757,Query Jira,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-754,TESTSCRIPT DATA -- replication to databricks.silver data ingestion,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-751,Create a SP list for TIPS-Q2 meter mapping,Story,Done,Medium,True,True,True,True,True,True,0
+DF-750,Deploy 1.5.0/1.6.0 to production - get pwd from jy for CGYMSDBP141 - svc_databricks_maximo_prod,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-748,Remove Demo Group from Terraform,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-747,Ingest QPOST_RPTS_WIO_STMT to Silver Layer,Sub-task,Blocked,Medium,True,True,True,True,True,True,0
+DF-746,Ingest User and Service Principal Entitlements,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-745,Ingest QPOST_RPTS_WIO_STMT Table,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-744,Link AD Groups to existing Business Areas,Story,User Testing,Medium,True,True,True,True,True,True,0
+DF-742,Develop the gold_measurement.volumetric_accounting table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-741,Ingest MMS and Q2 data sources,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-738,Measurements - Quantity Data,Epic,Backlog,High,True,True,True,True,True,True,0
+DF-737,Troubleshoot KAPS Daily and KAPS NRES Dashboard Scheduling Issues,Bug,Rejected,Medium,True,True,True,True,True,True,0
+DF-736,Create SPs to support Workspace API Queries and Admin Deployments,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-735,Create Gold Table Implementation for FCTT offloads and Samples,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-734,Implement permissioning for gold_measurement schema access,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-733,Missing Petrinex data for July,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-732,Creating Databricks Dashboard - Data Products Table,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-731,"Apply new notebook updates to Keyera Price Deck, Energy Aspects, and S&P Global",Story,User Testing,Medium,True,True,True,True,True,True,0
+DF-730,Consolidated Gold tables for fundamentals price and spreads,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-729,Ingest missing S&P Global data for the fundamentals dashboard,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-727,Review Technical Standards Doc,Task,Done,Medium,True,True,True,True,True,True,0
+DF-726,SCIM Integration,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-725,IAM Entitlements Testing Framework,Story,Done,Medium,True,True,True,True,True,True,0
+DF-724,IAM 001-003 - Bronze Unity Catalog Grants,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-723,Project Dashboard,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-722,Restructure Group Entitlements Silver Query,Story,Done,Medium,True,True,True,True,True,True,0
+DF-721,Technical Documentation,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-720,Incorrect percent in historical proportions (in new schema only),Bug,User Testing,Medium,True,True,True,True,True,True,0
+DF-719,setup production maximo SQL replication and accounts,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-718,"silver_maximo table metadata -- in ""comments"" please show ""attributename - title - remarks""",Improvement,User Testing,Medium,True,True,True,True,True,True,0
+DF-717,Update daily and/or monthly FWA logic to use ingested MMS tables,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-716,Create sample analysis data table,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-715,Move Dashboard Usage workflow from key-databricks-emissions,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-714,silver_maximo table metadata is not applied,Bug,User Testing,Medium,True,True,True,True,True,True,0
+DF-713,Metadata - map out how we will and should use it - and how we will use it to metric,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-712,Schema and security group hierarchy,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-711,Admin Application,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-710,"Databricks MCP Agent for Code Helpers (VS Code, Q Developer and Github copilot)",Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-709,"PAT Personal Access Tokens, or OAuth?",Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-708,Get access to QPOST_RPTS_INVOICE_DTL_CAN for Stoic,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-707,Define service principal and secrets to query rest api,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-706,Add keyera_utilities_<env> to terraform,Story,In Progress,High,True,True,True,True,True,True,0
+DF-705,Clean up gold_tips schema,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-704,Manage view permissions to dashboards via bundle yml,Story,Backlog,High,True,True,True,True,True,True,0
+DF-703,SCD2 Duplicates in silver_volumetrics.daily_production_volumes,Bug,In Progress,Medium,True,True,True,True,True,True,0
+DF-702,Add Global ETL User entitlement to the Workspace Admin in Terraform,Bug,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-701,Maximo Metadata Job can't be created on deployment,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-700,Review and Handover Deductions Query Logic,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-699,Implement Transformation Logic and Create Final Gold Deductions Table,Sub-task,Blocked,Medium,True,True,True,True,True,True,0
+DF-698,Ingest QPOST_RPTS_INVOICE_DTL_CAN to Silver Layer,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-697,Create and Validate Deductions Query to Match Meta-data Structure,Sub-task,Blocked,Medium,True,True,True,True,True,True,0
+DF-696,Correct Deductions Table,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-695,"""Analyst"" groups should not be able to read data outside of sandbox",Bug,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-694,eONE - Facility Balance Report,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-693,Add Strachan daily mass tag to volumes dashboard (CLC_DAY_MSS_FLO_SUM),Story,Done,Medium,True,True,True,True,True,True,0
+DF-692,Create visualization (dashboard) prototype,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-691,"Remove ""Enterprise | Analyst ..."" groups",Bug,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-690,Correct missing meta-data,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-689,Create Translated Tables,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-688,MMS Postgres Database Table Ingestion,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-687,Add dashboard permissions,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-686,Remove Daily Production volumes job and measurements dashboards from Emissions bundle,Story,Done,Medium,True,True,True,True,True,True,0
+DF-685,Update Unity Catalog schema names,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-684,Remove <catalog>.<domain>_all schemas,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-683,Define data governance and  sustainment  of the mapping table,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-682,key_extensionrationale column can't be resolved on TEST Incident Gold Table,Bug,Deploy,Medium,True,True,True,True,True,True,0
+DF-681,Remove QByte DMS Ingestion from Databricks,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-680,Customer Summary View can't be replaced. Permission Error,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-679,Query Databricks Groups,Story,Done,Medium,True,True,True,True,True,True,0
+DF-678,Maximo DATETIME fields are nontimezone where databricks DATETIMEOFFSET incl timezone,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-677,Create AD Groups - IGNORE THIS,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-676,Assign ACL to schemas,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-675,Add facility names to all gold tables,Story,Done,Medium,True,True,True,True,True,True,0
+DF-674,"Move Customer Summary, Customer_volume_historical_proportions to new schema",Story,User Testing,Medium,True,True,True,True,True,True,0
+DF-673,"Move Posted Volume, Deductions, and Meter Hier. to new schema",Story,User Testing,Medium,True,True,True,True,True,True,0
+DF-672,Rename naming convention in Databricks Bundles (Commercial),Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-671,Rename naming convention in Databricks Bundles (Analytics & Data-Extraction),Sub-task,Deploy,Medium,True,True,True,True,True,True,0
+DF-670,Licencing for Power BI (pro users vs. premium workspaces),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-668,Roles in workspaces in Power BI,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-667,Complete Keyera Price Deck Production Ingestion,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-666,Complete Keyera Price Deck Prototype,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-665,Complete Keyera Price Deck Code Review,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-664,Create Dashboard of Catalog Content,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-663,Duplicates in gold_volumetrics.daily_production_volumes_last_14_days,Bug,Done,High,True,True,True,True,True,True,0
+DF-662,Create job and bundle to run notebook,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-661,Update notebook to use SharePoint locations,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-660,Create notebook to ingest Excel files from volume,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-659,Update Terraform Scripts,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-658,Create AD groups,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-657,Create pipeline to ingest project management metadata,Story,Done,Medium,True,True,True,True,True,True,0
+DF-656,Databricks Platform Administration,Epic,In Progress,High,True,True,True,True,True,True,0
+DF-654,Productionize S&P Global Gold Table,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-653,Figure out plan to point existing Measurements dashboards to the new bundle,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-652,"Change job schedule to run from 7am to 10am, and 2pm to 4pm (0 10,25,40,55 7-10,14-15 * * ?)",Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-651,Change unvalidated table to pull previous pday,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-650,Setup Admin repo,Story,Done,Medium,True,True,True,True,True,True,0
+DF-649,Transition to Sustainment,Story,Done,Medium,True,True,True,True,True,True,0
+DF-648,Databricks Groups (Terraform),Story,User Testing,Highest,True,True,True,True,True,True,0
+DF-647,Create Customer Databricks Security Group for Demo TIPS,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-646,Complete Blather Production Ingestion,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-645,Complete Blather Code Review,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-644,Complete Blather Prototype,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-643,Complete Energy Aspects Production Ingestion,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-642,Complete Energy Aspects Code Review,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-641,Complete Energy Aspects Prototype,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-640,Complete Argus Production Ingestion,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-639,Complete Argus Code Review,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-638,Complete Argus Prototype,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-637,Complete Woodmac Production Ingestion,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-636,Complete Woodmac Code Review,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-635,Complete Woodmac Prototype,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-634,Complete S&P Production Ingestion,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-633,Perform S&P Code Review,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-632,Complete S& Prototype,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-631,Setup read only credentials to MMS database,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-630,Parse Maximo metadata,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-629,Apply Table Metadata from Maximo Metadata Tables,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-628,Ingest Table Metadata from Maximo Metadata Tables,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-627,Providing PAs with access to TIPS PA reports,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-626,Volumes by Stations - Report,Story,Done,Medium,True,True,True,True,True,True,0
+DF-625,Create Customer Portfolio Dashboard for Trucks,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-624,Fundamentals dashboard ingestion code for review and pipelining,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-623,Create output table definitions,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-622,Create PowerBI report,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-621,Create monthly_flow_weighted_average table,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-620,Create daily_flow_weighted_volumes table,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-619,Review required MMS tables,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-618,Maximo - Promote PO + POLINE tables from silver to production w/restricted/pii,Epic,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-617,"Set schedule so that it is offset to run at 10 mins past the hour (e.g. 6:10, 6:25, 6:40....). Keep run from 6am to 12pm.",Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-616,Change unvalidated_last_7_days to pull last 2 days instead to improve performance,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-615,Gold 3: G&P BD - Customer Volume Historical Proportions table - testing,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-614,Consolidate eOne and QByte replication to single DMS Instance,Story,In Progress,High,True,True,True,True,True,True,0
+DF-613,Deploy SNS notification when health check alarm is triggered,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-612,"document terraform, how it works, how remote terraform state is implemented",Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-611,Benny health check notifications,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-610,Migrate CI/CD pipelines to use OIDC,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-609,Composition Data and Flow Weighted Average for Any MMS meter,Epic,In Progress,Medium,True,True,True,True,True,True,0
+DF-608,How to secure/mask PII/Confidential Data in PO and POLINE table.,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-607,Get Alvaro a VDI to access mxdev6.keyera.com,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-606,Marco/JY - make sure all indexes are replicated in replication.  currently only index1 (clustered) is replicated,Story,Done,Low,True,True,True,True,True,True,0
+DF-605,"Marco - todo -  add 3 tables to test replication pub and sub: maxobjcfg, maxattribute, synonymdomain",Task,Done,Medium,True,True,True,True,True,True,0
+DF-604,Update Knowledge Base and related citation links with latest documents,Task,Rejected,Medium,True,True,True,True,True,True,0
+DF-603,create gold model table: incident,Task,Deploy,Medium,True,True,True,True,True,True,0
+DF-602,create gold model table: woactivity,Task,Deploy,Medium,True,True,True,True,True,True,0
+DF-601,Update ingestion from DMS to Source,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-600,OS BD & Logistics (eONE & Qbyte),Epic,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-599,Ingest Maximo Tables from the API,Story,Approved to Start,Low,True,True,True,True,True,True,0
+DF-598,PROD Knowedge Base deploy,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-596,Implement Reference Tables in Databricks,Sub-task,Done,High,True,True,True,True,True,True,0
+DF-595,Ingest Source Tables,Story,Deploy,Highest,True,True,True,True,True,True,0
+DF-594,Create Terraform for Service Credentials to Connect Databricks to the LAMBDA API,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-592,Deal Capture,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-591,Facilities Emissions R3,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-590,Schematic Pro Data,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-589,Automation of Equipment Runtime Hours & Load,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-588,EnviroSoft & GasTrac Data for Emissions,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-587,OnBase,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-585,PIMS Project Management Data,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-584,Rail Logistics,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-583,EnergySys Pipeline Logistics,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-582,Update metadata template for gold products,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-581,Update ingestion from DMS to Source,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-580,Qbyte Gold Tables,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-579,Best practices related to Native Queries vs. mCode vs. Dax,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-578,Update the query for the dashboard and add it to the dashboard,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-577,Update the Table to contain the missing tags,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-576,Measurement: Production Volumes Databricks Dashboard Data to Excel for the end user,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-575,Adding Missing Data - Measurement: Production Volumes Databricks Dashboard,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-574,Access Control & Networking Security with Power BI & Databricks (get reference from Dhruv),Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-573,Connection of Excel to Semantic Models (Dhruv),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-572,Use of deployment pipelines in Power BI (or not) (Dhruv),Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-571,Version control on Power BI reports (Dhruv),Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-570,Best practices related to Direct Query vs. Import (Dhruv),Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-569,Add/Confirm Service Account Permissions for AD Group(s) - Fundamentals,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-568,Add/Confirm Service Account Permissions for AD Group(s) - G&P,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-567,Add/Confirm Service Account Permissions for AD Group(s) - Logistics,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-566,Add/Confirm Service Account Permissions for AD Group(s) - Wapiti Emissions,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-565,Add/Confirm Service Account Permissions for AD Group(s) - Measurement,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-564,Create silver unvalidated_last_7_days table (DEV),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-563,Gain TEST access to SCTRL_MTR_HEADER_CAN_VW and QCTRL_PLANT_HDR,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-562,Gain PROD access to SCTRL_MTR_HEADER_CAN_VW and QCTRL_PLANT_HDR,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-561,Ingest SCTRL_MTR_HEADER_CAN_VW table,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-560,Create bronze raw volumes external table (DEV/TEST),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-559,Create IAM role and Databricks credential (DEV/TEST),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-558,Q2 Report Development,Epic,Done,Medium,True,True,True,True,True,True,0
+DF-557,Migrate Measurements-owned resources from emissions repo,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-556,Create Measurements code repository,Story,Done,Medium,True,True,True,True,True,True,0
+DF-553,Lead team in creating bit bucket pipeline for Benny deploys (work off of what is done for Generic Chatbot,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-552,Make a minor change (could be items coming out of code review) and deploy to Dev and Test.  Do a refresh of Test from Prod.  Utilize documen,Story,Blocked,Medium,True,True,True,True,True,True,0
+DF-549,Support Santi through Dev environment setup.  Document it and then pass to Mike H to setup his environment,Story,Done,Medium,True,True,True,True,True,True,0
+DF-548,document deployment procedure based on what was done to deploy recent UI updates on June 24,Story,Done,Medium,True,True,True,True,True,True,0
+DF-547,Productionize ingestion pipeline,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-546,keyera_measurement_prod.gold_compositions.sample_analysis_data unity catalg schema does not update,Bug,Done,High,True,True,True,True,True,True,0
+DF-545,Gold 8: G&P BD - Customer Volume Projections table,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-544,x - Missing reference tables,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-543,Ingest data from Energy Aspects API,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-542,Point to Test environment,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-541,Fix the broken link for Keyera Benefits & Retirement Guide - May 2025 file,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-540,Some parts of the app don't have the default font,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-539,SCI Review for DF-105 (Fundamentals Items),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-538,SCI Review for DF-71 (Logistics Items),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-537,Fix citations not saving with the bot's response after a refresh,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-536,Fix the successful authentication message design that appears right before the main app,Sub-task,Done,Low,True,True,True,True,True,True,0
+DF-535,Balance Data - Sample Analysis data used for Composition Balance needed,Story,Approved to Start,High,True,True,True,True,True,True,0
+DF-534,Create terraform scripts to support,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-533,Create terraform scripts to support,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-532,Create Terraform scripts to support the AD groups,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-531,Create Terraform Scripts to support,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-530,Fix the user greeting in the profile settings panel,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-529,Restore the dev and test badges in logos,Sub-task,Done,Low,True,True,True,True,True,True,0
+DF-528,Production Volumes dashboard - only display .PDAY_VOL for FSPL meters,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-527,Revise the disclaimer with an updated version from legal,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-526,Restore the welcome page,Bug,Done,Medium,True,True,True,True,True,True,0
+DF-525,Define Data Product Requirements - Business Access to Comp Match data,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-524,Create & Validate Databricks Dashboard,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-523,Create FreshService Catalog Items,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-522,Create Terraform Scripts,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-521,Create Databricks Groups,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-520,Create AD Groups,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-519,Create Data Access Package,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-518,Load Power BI metadata to Unity Catalog,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-517,Create FreshService Catalog Item,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-516,Create Power BI Workspace and Connection,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-515,Create Terraform Scripts,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-514,Create SQL Warehouse,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-513,Create Unity Catalog Schema,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-512,Create Databricks Group,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-511,Create AD Groups,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-510,Create Business Access Package,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-509,Create Data Transformation Pipeline,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-508,Ingest Data from Source System,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-507,Define Data Product Requirements,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-506,Create & Validate Power BI Semantic Model,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-505,KFS Emissions,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-504,Composition Data: Create Data Transformation Pipeline,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-503,Balance Data - Details and Composition Details require additional 'Reporting UOM' attribute,Story,Blocked,High,True,True,True,True,True,True,0
+DF-502,Create & Validate Databricks Dashboard,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-501,Create FreshService Catalog Item(s) - Measurement,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-500,Create Terraform Scripts,Sub-task,Done,High,True,True,True,True,True,True,0
+DF-499,Create Databricks Groups,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-498,Create AD Groups,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-497,Create Data Access Package,Story,Done,Medium,True,True,True,True,True,True,0
+DF-496,Load Power BI metadata to Unity Catalog,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-495,Create FreshService Catalog Item(s) - Measurement,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-494,Create Power BI Workspace and Connection,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-493,Create Terraform Scripts,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-492,Create SQL Warehouse,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-491,Create Unity Catalog Schema,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-490,Create Databricks Groups,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-489,Create AD Groups,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-488,Create Business Access Package,Story,Done,Medium,True,True,True,True,True,True,0
+DF-487,Volume Data: Create Data Transformation Pipeline,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-486,"Ingest ""Raw"" Measurement Data from AWS",Story,Done,Highest,True,True,True,True,True,True,0
+DF-485,Define Data Product Requirements,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-484,Create & Validate Power BI Semantic Model,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-483,Measurement Data,Epic,In Progress,Medium,True,True,True,True,True,True,0
+DF-482,Review Detailed Emissions dashboard,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-481,NFR-29 Usage reports should be created to show user activity with system for metric analysis,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-480,NFR-28 Create automated tests for validating integrations,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-479,NFR-27 Functional tests should be outlined for Data Storefront,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-478,NFR-26 Basic unit tests should accompany all development work,Task,Backlog,Medium,True,True,True,True,True,True,0
+DF-477,NFR-25 Integrations should be limited to daily to minimize API calls and network traffic,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-476,NFR-24 Data Storefront should be constructed in a way to minimize network traffic or API calls to FreshService,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-475,NFR-23 Data Storefront should perform it’s actions quickly as would be expected of a site of it’s use,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-474,NFR-22 System will give customer straightforward and informative error messages in the case of partial or whole system failure,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-473,NFR-21 System will support caching of customer PARs to account for issues with FreshService or Orchestration Server,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-472,NFR-20 Updates and maintenance would be scheduled outside of standard business hours,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-471,"NFR-18 Transactions for requests, integrations, etc will be logged and easily accessible by support",Task,Backlog,Medium,True,True,True,True,True,True,0
+DF-470,NFR-19 Website monitoring software should notify support of service outages (SolarWinds),Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-469,NFR-17 High availability during standard business hours,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-468,Build Pipeline for S&P Data,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-467,Build Pipeline for Woodmac Data,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-466,Update README,Story,Done,Medium,True,True,True,True,True,True,0
+DF-465,NFR-16 Data Storefront will have tabs for Data Storefront and My Requests,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-464,NFR-15 Data Storefront will contain a landing page,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-463,NFR-13 Data Menu will include contact mechanism for support (form or email address),Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-462,NFR-12 Data Menu design will be modern and follow standard best practices,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-461,NRF-11 Data Menu will show cards representing the available products grouped into easy-to-understand categories using product meta data,Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-460,NFR-10 Data Menu will have a search box (potentially Gen AI based),Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-459,"NFR-9 Data Menu will allow the customer to filter, sort, and search the available products",Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-458,Data Storefront Development,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-457,NFR-3 Integration between DUC+ and FreshService secured,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-456,NFR-8 Data Menu code will be securely stored in a code repository,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-455,NFR-7 All Data Storefront code will be code reviewed,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-454,NFR-6 Architecture of Orchestration Server and FreshService approved by Cybersecurity,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-453,NFR-5 Integration between FreshService and Orchestration Server secured,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-452,NFR-4 Integration between FreshService and Data Storefront secured,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-451,NFR-2 Data Storefront should be deployed to AWS or on an OnPrem Windows server and only accessible on Keyera network,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-450,Data Storefront Infrastructure,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-449,NFR-1 Data Storefront will be secured by requiring a login using Keyera SSO/AD,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-448,"FR-14 DUC+ to FreshService integration will include process to add, update, or remove SCIs (may be automated or manual)",Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-447,FR-13 Orchestration Server will run scripts that configure access to approved security groups,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-446,FR-12 Orchestration Server will communicate with Keyera systems (like AD),Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-445,FR-11 FreshService will call Orchestration Server to automate tasks (such as adding users to AD groups),Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-444,FR-10 FreshService will allow for approvals by approver defined in meta data in DUC+,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-443,FR-9 FreshService will have a group of defined workflows and automations for processing every SCI,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-442,FR-8 FreshService will have a service catalogue item (SCI) for every item in the DUC+,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-441,FR-7 FreshService will import a list of product items from the Databricks Unity Catalog Plus (DUC+) via flat file integration every day at 4,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-440,FR-6 Data Storefront will GET FreshService service catalog items flat file and store it in a folder accessible to Data Menu every day at 5:3,Story,Done,Medium,True,True,True,True,True,True,0
+DF-439,FR-5 Data Storefront will show a list of the customer’s tickets/PARs (receipt list),Story,Done,Medium,True,True,True,True,True,True,0
+DF-438,FR-4 Data Menu will show a product summary page when a customer clicks on a “card”,Story,Done,Medium,True,True,True,True,True,True,0
+DF-437,"FR-3 Data Storefront will request from FreshService all tickets as ""My Requests"" via API call",Story,Done,Medium,True,True,True,True,True,True,0
+DF-436,FR-2 Catalog will communicate customer product access requests (PAR) to FreshService via API call,Story,Done,Medium,True,True,True,True,True,True,0
+DF-435,FR-1 Catalog Will Extract Data From a FreshService JSON Export File,Story,Done,Medium,True,True,True,True,True,True,0
+DF-434,SCI Review for DF-39 (Measurement Items),Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-432,Gold 1: Posted Volumes table - testing,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-431,Document Technical Standards for Code & Deployment Management,Story,Approved to Start,Low,True,True,True,True,True,True,0
+DF-430,Document Technical Standards for Security & Authentication,Story,In Progress,Highest,True,True,True,True,True,True,0
+DF-429,Document Technical Standards for Databricks Platform Management,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-428,Document Technical Standards for Medallion Architecture,Story,Done,Low,True,True,True,True,True,True,0
+DF-426,Document Technical Standards for Operational Reporting,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-425,Document Technical Standards for Cost Controls,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-424,Document Technical Standards for Data Ingestion,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-423,Document Technical Standards for Databricks Dashboards,Story,Approved to Start,Low,True,True,True,True,True,True,0
+DF-422,Document General Architectural Principles & Best Practices,Story,Done,Medium,True,True,True,True,True,True,0
+DF-421,Ingest QRMTIPS.QCTRL_PLANT_HDR table,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-404,x-Ingest Data from Source System,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-400,Define Data Product Requirements,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-399,Deploy conversation history and conversation awareness to test and prod,Story,Done,Medium,True,True,True,True,True,True,0
+DF-397,Prod AD group for Benny updated to all Keyera users,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-396,Restore conversation history & context; fix issues with front end conversation state storage,Story,Done,Highest,True,True,True,True,True,True,0
+DF-395,Can't use the mouse to select text in the text field,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-394,Scrollbar is missing on chats,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-393,Disclaimer Missing,Story,Rejected,Highest,True,True,True,True,True,True,0
+DF-391,Front end remove local storage,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-390,Develop sustainment RACI for Storefront,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-389,Update BRD,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-388,Review BRD,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-387,Review Ops dashboard,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-386,Effective Configuration Date on Misc Fuel Consumers,Story,Done,Highest,True,True,True,True,True,True,0
+DF-385,Gold 2: G&P BD Customer Summary table - testing,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-384,Gold 4: Creating the G&P ACCTG - References table(s),Story,Done,Medium,True,True,True,True,True,True,0
+DF-383,Gold 6: Creating the G&P ACCTG - Deductions table,Story,Done,Medium,True,True,True,True,True,True,0
+DF-382,Gold 5: Creating the G&P ACCTG – Meter Hierarchy table,Story,Done,Medium,True,True,True,True,True,True,0
+DF-381,QQ-TIPS meter mapping 3 - maintaining,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-380,QQ-TIPS meter mapping 2 - ingesting,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-379,Gold 7: TIPS to Q2 Meter Mapping Table,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-378,Gold 3: Creating the G&P BD - Customer Volume Historical Proportions table,Story,Done,Highest,True,True,True,True,True,True,0
+DF-377,Gold 2: Creating the G&P DB - Customer Summary table,Story,Done,Highest,True,True,True,True,True,True,0
+DF-376,Gold 1: Creating G&P ACCTG - Posted Volumes table,Story,Done,Medium,True,True,True,True,True,True,0
+DF-363,OS BD: Add columns to QByte Data,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-362,Facility Balance Report for Logistics,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-361,Ingest additional tables into eONE Silver,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-360,Balancing Data: Create Data Transformation Pipeline,Epic,In Progress,High,True,True,True,True,True,True,0
+DF-359,Use allocated_volume_e3m3 for Fuel in Compliance Summary,Story,Done,Highest,True,True,True,True,True,True,0
+DF-358,Confirm if we can open Benny to all Keyera rather than Canada only,Story,Done,Medium,True,True,True,True,True,True,0
+DF-357,Add logic to handle most recent hours for equipment rate method for volumes,Story,Done,Highest,True,True,True,True,True,True,0
+DF-356,Incorporate facility hierarchy mapping into Petrinex dashboard,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-355,Create Project Status Dashboard,Story,Done,High,True,True,True,True,True,True,0
+DF-354,"Assess naming of all workspaces, resources, groups, etc.",Task,Rejected,Low,True,True,True,True,True,True,0
+DF-350,Possible missing data in TIPS extract,Bug,Done,Highest,True,True,True,True,True,True,0
+DF-348,Decommission DMS,Story,In Progress,Low,True,True,True,True,True,True,0
+DF-347,Define and review metadata for new venting_emissions_metrics and abgpi_metrics tables with the business,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-346,Productionize Wapiti Operations dashboard,Story,Done,High,True,True,True,True,True,True,0
+DF-345,Productionize Rimbey Operations dashboard,Story,Done,High,True,True,True,True,True,True,0
+DF-344,Production Deployment,Story,Done,Medium,True,True,True,True,True,True,0
+DF-343,Review Wapiti Q2 Meters,Story,Done,Highest,True,True,True,True,True,True,0
+DF-342,Develop Project & Sustainment Proccesses,Epic,In Evaluation,Lowest,True,True,True,True,True,True,0
+DF-341,Databricks Fundamentals Training,Story,Done,High,True,True,True,True,True,True,0
+DF-340,Data Engineering Training,Story,Rejected,High,True,True,True,True,True,True,0
+DF-339,Data Analyst Training,Story,Rejected,High,True,True,True,True,True,True,0
+DF-338,Training,Epic,Done,High,True,True,True,True,True,True,0
+DF-337,Document Technical Standards for Power BI Integration,Story,In Progress,High,True,True,True,True,True,True,0
+DF-336,Develop & Document Technical Standards,Epic,In Progress,Highest,True,True,True,True,True,True,0
+DF-335,Exclude emissions data prior to Measurements volumes sign-off date (Rimbey and Wapiti),Story,Done,Highest,True,True,True,True,True,True,0
+DF-334,Update Measurement Composition and Volumes Dashboards,Story,Done,Medium,True,True,True,True,True,True,0
+DF-333,Deductions / Report Gold Table,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-332,Posted Volume Gold Table,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-331,Meter Hierarchy Gold Table,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-330,Move the copy button on the left side of Benny's chat bubble,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-329,Create emissions data dictionary,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-328,Automated testing for Sustainability dataset,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-327,Add Benny's official icon in the conversation as its profile photo,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-326,Add a delay when showing Benny's responding status,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-325,Add tests for utility functions,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-324,Sneha Orthner Report - Q2,Story,Done,Medium,True,True,True,True,True,True,0
+DF-323,Weekly Production Report - Simonette - Q2,Story,Done,Medium,True,True,True,True,True,True,0
+DF-322,Weekly Production Report - Wapiti Report - Q2,Story,Done,Medium,True,True,True,True,True,True,0
+DF-321,Create separate Wapiti and Rimbey emissions dashboards,Story,Rejected,Highest,True,True,True,True,True,True,0
+DF-320,Update Knowledge Base Documents based on HR Feedback,Story,Done,Medium,True,True,True,True,True,True,0
+DF-319,Flare Emissions and Liquid Fuel Emissions can't cast a column from String to Int because it is malformed,Bug,Rejected,Highest,True,True,True,True,True,True,0
+DF-318,Pull sustainability excel data based on effective_configuration_date,Story,Rejected,Low,True,True,True,True,True,True,0
+DF-317,Update emissions dashboard to make sure ACGAS Blowdown Heater analysis group is in Production Inputs,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-316,Add new equip_allocated_volumes columns to manual notebook,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-315,Update fuel_gas_combustion with new composition logic,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-314,"Add composition_group, emissions_group cols to equip_allocated_volumes",Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-313,Get rid of duplicate CO2 mol weight in Gas Properties,Story,Backlog,Low,True,True,True,True,True,True,0
+DF-312,Draft Chatbot Test Runbook (Governance focused),Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-311,Draft Chatbot Testing Strategy,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-310,Draft Chatbot Support Strategy,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-309,Draft Chatbot Incident Response and Roll-Back Plan,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-308,Draft Chatbot Deployment Plan,Task,In Progress,Medium,True,True,True,True,True,True,0
+DF-306,Databricks Calculation Table (Sum-If Calculations),Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-305,Ingest TIPS Data per metadata product definition,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-304,2 - Ingest Data from the Source System (TIPS),Story,Done,Medium,True,True,True,True,True,True,0
+DF-290,GenAI Risk Assessment & Sign-Off,Story,Done,Medium,True,True,True,True,True,True,0
+DF-289,Draft Functional/Technical Design Document,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-288,Draft Business Requirements Document,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-287,General Use Chat Bot,Epic,In Progress,Lowest,True,True,True,True,True,True,0
+DF-286,Create main numbered GenAI technical framework document,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-285,GenAI Technical Framework,Epic,In Progress,Low,True,True,True,True,True,True,0
+DF-284,Remove userid from conversation logging entirely,Story,Done,Medium,True,True,True,True,True,True,0
+DF-283,Not prompted w/ Disclaimer for new sessions,Bug,Rejected,Medium,True,True,True,True,True,True,0
+DF-281,Update source documentation,Story,Done,Medium,True,True,True,True,True,True,0
+DF-280,Cleanup v2 tables in keyera_sustainability_* catalog,Story,Done,Low,True,True,True,True,True,True,0
+DF-279,SQL Warehouse created and provisioned through terraform & apply budget policy to cluster,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-278,Interactive cluster created and provisioned through terraform & apply budget policy to cluster,Sub-task,In Progress,Medium,True,True,True,True,True,True,0
+DF-277,Unity Catalog and schema created and provisioned through terraform,Sub-task,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-276,Add additional table to Bronze/Silver Tips - reference,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-265,"Add link to Benny under the ""Managed Favorites"" tab in internet browser",Story,Done,Medium,True,True,True,True,True,True,0
+DF-264,Add Benny's profile pic and update colors to orange & blue,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-263,Databricks Bundles deployment failing because of permission error,Bug,Done,Highest,True,True,True,True,True,True,0
+DF-262,Update Measurements: Compositional Analysis dashboard with manual prod changes from May 9 @ 11am,Story,Done,Medium,True,True,True,True,True,True,0
+DF-261,Automate the application of spreadsheet metadata into databricks,Sub-task,User Testing,Highest,True,True,True,True,True,True,0
+DF-259,PP test,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-258,Fix the app's constant refresh,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-257,Add Environment Name to the Databricks Dashboards Name and remove _vXX.lvdash.json from dashboards/,Story,Done,Highest,True,True,True,True,True,True,0
+DF-256,Visualize S&P Data - SUMMER STUDENTS,Task,Done,Medium,True,True,True,True,True,True,0
+DF-236,LI Contracts & Amendments Processing,Epic,Backlog,Lowest,True,True,True,True,True,True,0
+DF-226,G&P Contracts & Amendments Processing,Epic,Backlog,Lowest,True,True,True,True,True,True,0
+DF-225,"SUMMER STUDENTS - Review Datasets, Start Visualizations in PowerBI/Databricks",Story,Done,Medium,True,True,True,True,True,True,0
+DF-215,G&P BD Price Data - Toll & Fee,Epic,Rejected,Lowest,True,True,True,True,True,True,0
+DF-205,G&P BD Monthly Forecast Customer Volumes,Epic,Rejected,Lowest,True,True,True,True,True,True,0
+DF-195,G&P BD Daily Customer Volumes,Epic,Rejected,Lowest,True,True,True,True,True,True,0
+DF-185,Cheecham Emissions Workflows,Epic,Backlog,Lowest,True,True,True,True,True,True,0
+DF-184,Transform data into a suitable format for visualization and end-user presentation,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-183,Ingest all forward curve data,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-182,Ingest all forward curve meta-data tables,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-181,Create a service account that can be used to authenticate against the Argus APIs,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-180,Review all attached Argus documentation on how to access forward curve data,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-179,Ingest forward curve data via Argus API,Story,Done,Medium,True,True,True,True,True,True,0
+DF-178,"Create a landing page that has space to display ""receipts"" from requests made to Freshservice",Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-177,Create an expanded data card view to show more information from the Freshservice service catalog items,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-176,Create a search menu to filter the data cards,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-175,Create a filter menu to filter the data cards,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-174,Create sample site that ingests Freshservice service catalog item file,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-173,Data Storefront UI/UX Components Prep,Story,Done,High,True,True,True,True,True,True,0
+DF-171,Move work in progress dashboard from Dev to Test environment,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-170,S&P Data Visualization,Task,Done,Medium,True,True,True,True,True,True,0
+DF-169,S&P Data Ingestion in Databricks,Task,Done,Medium,True,True,True,True,True,True,0
+DF-168,Create Commodity Mapping Tempate,Task,Done,Medium,True,True,True,True,True,True,0
+DF-166,SUMMER STUDENTS - Fundamentals Dashboard Attachments,Story,Rejected,Highest,True,True,True,True,True,True,0
+DF-165,Final UI touches and bug fixes,Story,Done,Medium,True,True,True,True,True,True,0
+DF-164,Total number of batches,Sub-task,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-163,List: Offload details,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-162,Bar chart: Max absolute deviation,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-161,List: Density range by source location,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-160,Pie chart: Sample reasons,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-159,Real-time sample assignment,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-158,Counter: Retained samples,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-157,Retained samples,Sub-task,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-156,metadata col info,Story,Done,Medium,True,True,True,True,True,True,0
+DF-155,Break/Fix & Sustainment Items,Epic,In Progress,Highest,True,True,True,True,True,True,0
+DF-154,Gold 6: FCTT Offloads and Samples Dashboard,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-153,Gold 5: C5 Month End,Story,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-152,Gold 4: C3 Month End,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-151,Gold 3: FCTT Sampling Criteria,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-150,Gold 2: Sample Library,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-149,Gold 1: FCTT Offloads and Samples,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-145,Align Comms Plan w/ HR,Story,Done,Medium,True,True,True,True,True,True,0
+DF-144,Cross Training,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-143,Document Support / Sustainment Process,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-142,Chatbot Support & Sustainment,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-141,Confirm w/ Business that feedback (thumbs up/down) is not needed,Story,Done,Medium,True,True,True,True,True,True,0
+DF-133,Ingest exchange data from Keyera's ThompsonReuters table,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-132,Create Storefront Dev Environment,Story,Approved to Start,High,True,True,True,True,True,True,0
+DF-131,Onboard Eric,Story,Done,High,True,True,True,True,True,True,0
+DF-130,Develop Requirements & BRD,Story,Done,High,True,True,True,True,True,True,0
+DF-128,Create report of convo summarization.,Story,Done,Medium,True,True,True,True,True,True,0
+DF-127,Incorporate UAT feedback.,Story,Done,Medium,True,True,True,True,True,True,0
+DF-126,Setup private network.,Story,Done,Medium,True,True,True,True,True,True,0
+DF-125,Retore Benny's memory.,Story,Done,Medium,True,True,True,True,True,True,0
+DF-124,Add activity_id = REC to the filters for silver_petrinex,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-123,Fix Serverless compute for Sharepoint ingestion,Story,Done,Highest,True,True,True,True,True,True,0
+DF-122,Petrinex SDC2 logic isn't working correctly,Bug,Done,Highest,True,True,True,True,True,True,0
+DF-121,"Change schedule of ""Daily Production Volumes"" workflow",Story,Done,High,True,True,True,True,True,True,0
+DF-120,Schedule data refreshes to 8 am daily,Sub-task,Backlog,Medium,True,True,True,True,True,True,0
+DF-119,Ingest Sharepoint data as strings into bronze and move data enforcement to silver,Story,Done,Highest,True,True,True,True,True,True,0
+DF-118,Setup Permissions for Terraform Bitbucket Repo,Sub-task,Approved to Start,Medium,True,True,True,True,True,True,0
+DF-117,FCTT Month End Preparations,Epic,Backlog,Lowest,True,True,True,True,True,True,0
+DF-116,Offloads by source location,Sub-task,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-115,Total number of offloads,Sub-task,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-114,Total volume,Sub-task,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-113,Comp Match Data Ingestion,Story,In Progress,Medium,True,True,True,True,True,True,0
+DF-112,Comp Match Data Access for Business,Epic,In Progress,Medium,True,True,True,True,True,True,0
+DF-111,Create a matrix of AD groups and Freshservice Catalog items,Story,Done,High,True,True,True,True,True,True,0
+DF-110,Develop Requirements,Story,Backlog,Low,True,True,True,True,True,True,0
+DF-108,Benny the HR Benefits Chatbot,Epic,User Testing,High,True,True,True,True,True,True,0
+DF-107,Data Storefront,Epic,In Progress,High,True,True,True,True,True,True,0
+DF-106,Create Data Product Access Package,Story,Done,Medium,True,True,True,True,True,True,0
+DF-105,Create Freshservice Catalog Item(s) and Provisioning Workflows - Fundamentals,Story,Done,Medium,True,True,True,True,True,True,0
+DF-104,"Define, Create, and Load Metadata for Data Products",Story,User Testing,Low,True,True,True,True,True,True,0
+DF-103,"1 - Define, Create, and Load Metadata for Data Products",Story,User Testing,High,True,True,True,True,True,True,0
+DF-102,Setup PoC OpenID Connect to AWS,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-101,"Define Permissions, Naming Conventions and Resources for Fundamentals (or any other business area)",Sub-task,User Testing,Medium,True,True,True,True,True,True,0
+DF-100,Terraform Deployment AWS Administrative Account,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-99,Terraform Deployments Documentation,Sub-task,Rejected,Medium,True,True,True,True,True,True,0
+DF-98,Bitbucket Repo for Databricks Terraform Deployments,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-97,Terraform Deployment Script,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-96,Terraform Validation Script,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-95,Create Business User Access Package,Story,Done,Medium,True,True,True,True,True,True,0
+DF-94,Test increased I/O limits in Databricks - TIPS test environment.,Sub-task,Done,Highest,True,True,True,True,True,True,0
+DF-93,Team cannot access TIPS data due to sessions IO limits,Bug,Done,High,True,True,True,True,True,True,0
+DF-92,Create Freshservice Catalog Item(s) and Provisioning Workflows - G&P Business Development,Story,Done,High,True,True,True,True,True,True,0
+DF-91,Create Data Product Access Package,Story,Done,High,True,True,True,True,True,True,0
+DF-90,GOLD DATASET QUERY: materialsmanagement_inventoryissue,Story,In Evaluation,Medium,True,True,True,True,True,True,0
+DF-89,Review performance results with DBA + DF Team,Task,Done,Medium,True,True,True,True,True,True,0
+DF-88,Maximo Work Order Cost Reporting Datasets,Epic,In Evaluation,Low,True,True,True,True,True,True,0
+DF-87,Create Business User Access Package,Story,Done,High,True,True,True,True,True,True,0
+DF-85,Run Petrinex Workflow to ingest Jan 2024 data,Story,Done,Highest,True,True,True,True,True,True,0
+DF-84,Create Emissions: Operations dashboard,Story,Done,Highest,True,True,True,True,True,True,0
+DF-83,Create Petrinex Dashboards,Story,Done,Highest,True,True,True,True,True,True,0
+DF-82,Investigate using wheel files for serverless compute,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-81,Sharepoint Ingestion import apply_bronze_preprocessing error,Bug,Done,Highest,True,True,True,True,True,True,0
+DF-80,Power BI Measurement Report - Databricks and Power BI Test,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-79,SharePoint Test,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-78,OAuth Token Expiration - Service for Power BI and Databricks to Refresh Data in Power BI,Story,Done,Medium,True,True,True,True,True,True,0
+DF-77,Sharing the Dataset with End User,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-76,Incremental Refresh,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-75,"Optimize the Visual, Queries, Tables",Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-74,Replicate and combine all report into one report,Sub-task,Done,Medium,True,True,True,True,True,True,0
+DF-73,Mashed Report - PBI,Story,Done,Medium,True,True,True,True,True,True,0
+DF-72,"Define, Create, and Load Metadata for Data Products",Story,Approved to Start,Low,True,True,True,True,True,True,0
+DF-71,Create FreshService Catalog Item(s) and Provisioning Workflows - Logistics,Story,Done,Low,True,True,True,True,True,True,0
+DF-70,Create Business User Access Package,Story,In Progress,Low,True,True,True,True,True,True,0
+DF-69,Create Data Product Access Package,Story,Done,Low,True,True,True,True,True,True,0
+DF-68,Measurement WellTrak Calibrations and Inspections List,Epic,Backlog,Medium,True,True,True,True,True,True,0
+DF-67,write query to generate metatdata for API Object Structures,Task,Backlog,Low,True,True,True,True,True,True,0
+DF-66,write query to generate metadata for base tables -> unity catalog++ metada gen?,Task,Deploy,Medium,True,True,True,True,True,True,0
+DF-65,gold model data: enterprise_<env>.gold_health_safety.event_list,Story,Deploy,Medium,True,True,True,True,True,True,0
+DF-64,setup service accounts test,Story,Done,Medium,True,True,True,True,True,True,0
+DF-63,setup service accounts dev,Story,Done,Medium,True,True,True,True,True,True,0
+DF-62,define base tables for replication,Story,Done,Medium,True,True,True,True,True,True,0
+DF-61,Maximo HS Event List & Weekly Dashboards,Epic,Deploy,Low,True,True,True,True,True,True,0
+DF-58,"Define, Create, and Load Metadata for Data Products",Story,User Testing,Highest,True,True,True,True,True,True,0
+DF-57,Create Freshservice Catalog Item(s) and Provisioning Workflows - Sustainability (Wapiti Emissions),Story,Done,Highest,True,True,True,True,True,True,0
+DF-56,Complete Sustainability Data for Wapiti,Story,Done,Highest,True,True,True,True,True,True,0
+DF-55,Create Data Product Access Package,Story,Done,Highest,True,True,True,True,True,True,0
+DF-54,Create Business User Access Package,Story,User Testing,Highest,True,True,True,True,True,True,0
+DF-53,Enable force bundle deployment to environments,Story,Done,Highest,True,True,True,True,True,True,0
+DF-50,Review Bitbucket user access - document deployment requirements,Task,Backlog,High,True,True,True,True,True,True,0
+DF-49,Move Bitbucket code repos to new workspace under the project.,Task,Done,Medium,True,True,True,True,True,True,0
+DF-45,Publish tables to keyera_enterprise_<env>.gold_tips - main business tables,Story,Done,High,True,True,True,True,True,True,0
+DF-44,Ingest Reference Tables from TIPS,Story,Done,Highest,True,True,True,True,True,True,0
+DF-40,Create a PowerBI workspace for the Measurement Analyst team to publish and share visualizations created in Power BI,Story,Done,High,True,True,True,True,True,True,0
+DF-39,Create FreshService Catalog Item(s) and Provisioning Workflows - Measurement,Story,Done,High,True,True,True,True,True,True,0
+DF-38,"Create a single internal, viewer, DATA AD (SG_ALL_IT_DF_MEA_ALL_DATA_VIEWER_IN) to secure keyera_measurement_<env>",Story,Done,High,True,True,True,True,True,True,0
+DF-37,"Setup of Data security groups (AD group, Databricks wrapper group) for Measurement catalog including the new daily volumes table",Story,Done,Low,True,True,True,True,True,True,0
+DF-29,Publish tables to keyera_enterprise_<env>.gold_dearman,Story,User Testing,Low,True,True,True,True,True,True,0
+DF-28,Create Venting Emissions workflow,Story,Done,Highest,True,True,True,True,True,True,0
+DF-27,Daily Production Volumes,Epic,Done,Medium,True,True,True,True,True,True,0
+DF-26,Automate Compositions data upload for Flaring,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-25,Automate Equipment Hours and Load data upload,Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-24,"Add Fuel Gas, Electrical, Fugitive, Liquid Fuel Combustion, and Flare Emissions for Wapiti",Story,Done,Highest,True,True,True,True,True,True,0
+DF-21,Access to Databricks (Lakehouse workspace) to read and query the S&P Global data by a select group of Fundamentals users (analysts and read ,Story,Rejected,Highest,True,True,True,True,True,True,0
+DF-20,S&P Global Silver tables for the requested data,Story,Done,Medium,True,True,True,True,True,True,0
+DF-19,Create ABGPI workflow,Story,Done,Highest,True,True,True,True,True,True,0
+DF-18,Fundamentals Dashboard,Epic,In Progress,Low,True,True,True,True,True,True,0
+DF-16,TIPS Volumetric Data by Customer,Epic,In Progress,Highest,True,True,True,True,True,True,0
+DF-12,Revise schema of keyera_measurement_xxx.sliver_volumentric.daily_production_volumes to include 'Site',Story,Backlog,Medium,True,True,True,True,True,True,0
+DF-11,Dearman Logistics Data,Epic,In Progress,Lowest,True,True,True,True,True,True,0
+DF-10,Update Measurement: Production Volume JSON to Repo,Story,Done,Medium,True,True,True,True,True,True,0
+DF-9,Move Measurements: Production Volumes dataset query to gold table,Story,Done,Medium,True,True,True,True,True,True,0
+DF-8,Connect https://bitbucket.org/keyeradataservices/keyera-databricks/src/main/ to DF Jira,Task,Done,Low,True,True,True,True,True,True,0
+DF-1,Wapiti Emissions Workflows,Epic,In Progress,Highest,True,True,True,True,True,True,0
+DF-51,Ingest Comp Match,Story,Rejected,Medium,True,True,True,True,True,True,0
+DF-52,Automate Export of Daily Raw Meter Volumes for KAPS,Story,In Evaluation,Low,True,True,True,True,True,True,0
