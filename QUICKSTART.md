@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Option 1: Production CLI (Simplest)
 
 ```bash
-python -m src.cli.prod --input raw-dataset/JIRA.xml --output clean_backlog.csv --verbose
+python -m src.cli.prod --input datasets/JIRA.xml --output clean_backlog.csv --verbose
 ```
 
 **Output:**
@@ -40,7 +40,7 @@ JIRA Ticket Meta Parser v1.0.0
 ==================================================
 
 [1/4] Loading pipeline...
-[2/4] Processing raw-dataset/JIRA.xml...
+[2/4] Processing datasets/JIRA.xml...
 [3/4] Saving to clean_backlog.csv...
 [4/4] Complete!
 
@@ -58,10 +58,10 @@ rank  key        score  type   priority
 
 ```bash
 # Step 1: Validate
-python -m src.cli.dev validate raw-dataset/JIRA.xml
+python -m src.cli.dev validate datasets/JIRA.xml
 
 # Step 2: Extract features
-python -m src.cli.dev extract raw-dataset/JIRA.xml
+python -m src.cli.dev extract datasets/JIRA.xml
 
 # Step 3: Generate embeddings
 python -m src.cli.dev embed
@@ -70,7 +70,7 @@ python -m src.cli.dev embed
 python -m src.cli.dev index
 
 # Step 5: Run full pipeline
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Check status:**
@@ -337,7 +337,7 @@ cp config/default.yaml config/experiment.yaml
 # Edit experiment.yaml (change ranker params)
 
 # Run with custom config
-python -m src.cli.dev full raw-dataset/JIRA.xml --config config/experiment.yaml
+python -m src.cli.dev full datasets/JIRA.xml --config config/experiment.yaml
 
 # Compare outputs
 diff artifacts/backlogs/clean_backlog_*.csv
@@ -347,13 +347,13 @@ diff artifacts/backlogs/clean_backlog_*.csv
 
 ```bash
 # Validate only
-python -m src.cli.dev validate raw-dataset/JIRA.xml
+python -m src.cli.dev validate datasets/JIRA.xml
 
 # Check report
 cat artifacts/validation/backbone_report.csv | grep "PROJ-123"
 
 # Extract features for one issue
-python -m src.cli.dev extract raw-dataset/JIRA.xml
+python -m src.cli.dev extract datasets/JIRA.xml
 cat artifacts/features/variability_features_*.parquet | grep "PROJ-123"
 ```
 

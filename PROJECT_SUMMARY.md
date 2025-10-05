@@ -66,7 +66,7 @@ jira-ticket-meta-parser/
 │       ├── all-MiniLM-L6-v2/         # 384-D embeddings
 │       └── colbertv2.0/              # Optional re-ranker
 │
-├── raw-dataset/                      # Input data
+├── datasets/                      # Input data
 │   ├── JIRA.xml                      # Sample data (5.7 MB)
 │   └── csv-exported-from-xml/
 │       └── JIRA.csv                  # Sample data (1.2 MB)
@@ -365,7 +365,7 @@ cat benchmarks/benchmarks_*.json | jq '.validation[0].duration_sec'
 5. **Has zero hardcoding** (all params in config)
 6. **Is ready to build and train** (no scaffolding, fully implemented)
 
-**You can run it immediately** on the provided `raw-dataset/JIRA.xml` to get a ranked backlog.
+**You can run it immediately** on the provided `datasets/JIRA.xml` to get a ranked backlog.
 
 **Time to first output:** < 5 minutes (after `pip install -r requirements.txt`)
 

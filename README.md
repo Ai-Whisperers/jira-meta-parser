@@ -27,7 +27,7 @@ pip install -e .
 
 ```bash
 # Simple one-command execution
-python -m src.cli.prod --input raw-dataset/JIRA.xml --output backlog.csv --verbose
+python -m src.cli.prod --input datasets/JIRA.xml --output backlog.csv --verbose
 
 # Or using the installed command
 jira-validate --input JIRA.xml --output clean_backlog.csv
@@ -37,11 +37,11 @@ jira-validate --input JIRA.xml --output clean_backlog.csv
 
 ```bash
 # Run individual stages
-python -m src.cli.dev validate raw-dataset/JIRA.xml
-python -m src.cli.dev extract raw-dataset/JIRA.xml
+python -m src.cli.dev validate datasets/JIRA.xml
+python -m src.cli.dev extract datasets/JIRA.xml
 python -m src.cli.dev embed
 python -m src.cli.dev index
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 
 # Check pipeline status
 python -m src.cli.dev status
@@ -114,7 +114,7 @@ jira-ticket-meta-parser/
 ├── benchmarks/                # Performance metrics
 ├── logs/                      # Execution logs
 ├── models/                    # Pre-downloaded models
-├── raw-dataset/               # Input data
+├── datasets/               # Input data
 ├── requirements.txt
 ├── pyproject.toml
 └── README.md
@@ -287,10 +287,10 @@ Edit `config/default.yaml` for your environment:
 
 ```bash
 # Full pipeline (development mode)
-python -m src.cli.dev full raw-dataset/JIRA.xml --skip-training
+python -m src.cli.dev full datasets/JIRA.xml --skip-training
 
 # Production mode (one command)
-python -m src.cli.prod -i raw-dataset/JIRA.xml -o output.csv -v
+python -m src.cli.prod -i datasets/JIRA.xml -o output.csv -v
 ```
 
 ### 4. Check Results

@@ -18,11 +18,11 @@ Controls human approval workflow for generated weak labels.
 ```bash
 # Auto mode (no prompts)
 export WEAK_LABEL_APPROVAL=auto
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 
 # Manual mode (human review required)
 export WEAK_LABEL_APPROVAL=manual
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Manual Mode Workflow:**
@@ -81,7 +81,7 @@ Enables human approval before generating synthetic variations.
 ```bash
 # Enable human review for augmentation
 export HUMAN_REVIEW_MODE=true
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Human Review Workflow:**
@@ -102,7 +102,7 @@ python -m src.cli.dev full raw-dataset/JIRA.xml
 
 ```bash
 # No environment variables needed
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Result:**
@@ -117,7 +117,7 @@ python -m src.cli.dev full raw-dataset/JIRA.xml
 ```bash
 export WEAK_LABEL_APPROVAL=manual
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Result:**
@@ -134,7 +134,7 @@ python -m src.cli.dev full raw-dataset/JIRA.xml
 export HUMAN_REVIEW_MODE=true
 export AUGMENTATION_FACTOR=3
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Config requirement:**
@@ -159,7 +159,7 @@ export WEAK_LABEL_APPROVAL=manual
 export HUMAN_REVIEW_MODE=true
 export AUGMENTATION_FACTOR=4
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Config requirement:**
@@ -202,7 +202,7 @@ export WEAK_LABEL_APPROVAL=manual
 export HUMAN_REVIEW_MODE=true
 export AUGMENTATION_FACTOR=2
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Why:**
@@ -219,7 +219,7 @@ python -m src.cli.dev full raw-dataset/JIRA.xml
 export WEAK_LABEL_APPROVAL=auto
 export AUGMENTATION_FACTOR=2
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **Why:**
@@ -235,7 +235,7 @@ python -m src.cli.dev full raw-dataset/JIRA.xml
 # Try different augmentation levels
 for factor in 1 2 3 4 5; do
     export AUGMENTATION_FACTOR=$factor
-    python -m src.cli.dev full raw-dataset/JIRA.xml
+    python -m src.cli.dev full datasets/JIRA.xml
     # Compare model metrics
 done
 ```

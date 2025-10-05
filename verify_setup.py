@@ -60,8 +60,8 @@ def check_directories():
         "src/adapters",
         "src/utils",
         "src/cli",
-        "models/model-files/all-MiniLM-L6-v2",
-        "raw-dataset",
+        "./models/model-files/all-MiniLM-L6-v2",
+        "./datasets",
     ]
 
     all_ok = True
@@ -129,8 +129,8 @@ def check_imports():
 def check_sample_data():
     """Check if sample data exists."""
     print("\nChecking sample data...")
-    xml_path = Path("raw-dataset/JIRA.xml")
-    csv_path = Path("raw-dataset/csv-exported-from-xml/JIRA.csv")
+    xml_path = Path("datasets/JIRA.xml")
+    csv_path = Path("datasets/csv-exported-from-xml/JIRA.csv")
 
     has_xml = xml_path.exists()
     has_csv = csv_path.exists()
@@ -191,7 +191,7 @@ def main():
     if all_passed:
         print("\n🚀 All checks passed! Ready to run pipeline.")
         print("\nQuick start:")
-        print("  python -m src.cli.prod --input raw-dataset/JIRA.xml --output backlog.csv -v")
+        print("  python -m src.cli.prod --input datasets/JIRA.xml --output backlog.csv -v")
         return 0
     else:
         print("\n⚠ Some checks failed. Please fix issues above.")

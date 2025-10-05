@@ -14,11 +14,11 @@ JIRA Ticket Meta Parser is a production ML pipeline that transforms chaotic JIRA
 
 ```bash
 # Full pipeline (development mode with stage control)
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 
 # Individual stages
-python -m src.cli.dev validate raw-dataset/JIRA.xml
-python -m src.cli.dev extract raw-dataset/JIRA.xml
+python -m src.cli.dev validate datasets/JIRA.xml
+python -m src.cli.dev extract datasets/JIRA.xml
 python -m src.cli.dev embed
 python -m src.cli.dev index
 python -m src.cli.dev status
@@ -26,14 +26,14 @@ python -m src.cli.dev clean
 
 # With environment controls
 export WEAK_LABEL_APPROVAL=manual
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 ### Production CLI
 
 ```bash
 # Single-command execution (production mode)
-python -m src.cli.prod --input raw-dataset/JIRA.xml --output backlog.csv --verbose
+python -m src.cli.prod --input datasets/JIRA.xml --output backlog.csv --verbose
 
 # Or using installed command
 jira-validate --input JIRA.xml --output clean_backlog.csv
@@ -224,7 +224,7 @@ pipeline.ranker.save("artifacts/models/ltr_model.txt")
 
 ```bash
 # Run validation only, inspect report
-python -m src.cli.dev validate raw-dataset/JIRA.xml
+python -m src.cli.dev validate datasets/JIRA.xml
 cat artifacts/validation/backbone_report.csv
 
 # Check weak label distribution

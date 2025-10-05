@@ -138,7 +138,7 @@ click: installed
 # No augmentation, manual weak label review
 export WEAK_LABEL_APPROVAL=manual
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **What happens:**
@@ -165,7 +165,7 @@ export AUGMENTATION_FACTOR=2
 # Enable augmentation in config
 # preprocessing.enabled: true
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 **What happens:**
@@ -184,7 +184,7 @@ python -m src.cli.dev full raw-dataset/JIRA.xml
 # No human interaction
 export WEAK_LABEL_APPROVAL=auto
 
-python -m src.cli.dev full raw-dataset/JIRA.xml --skip-training=False
+python -m src.cli.dev full datasets/JIRA.xml --skip-training=False
 ```
 
 **Use after:** Initial review looks good (Option 1 passed)
@@ -215,7 +215,7 @@ cd "H:/workbench/PERSONAL CORPUS/AI WHISPERERS CORPORA/AI WHISPERERS REPOS/jira-
 
 export WEAK_LABEL_APPROVAL=manual
 
-python -m src.cli.dev full raw-dataset/JIRA.xml
+python -m src.cli.dev full datasets/JIRA.xml
 ```
 
 ### Step 2: Review Weak Labels
@@ -282,8 +282,8 @@ embeddings:
 **Solution:**
 ```bash
 # Run individual stages
-python -m src.cli.dev validate raw-dataset/JIRA.xml
-python -m src.cli.dev extract raw-dataset/JIRA.xml
+python -m src.cli.dev validate datasets/JIRA.xml
+python -m src.cli.dev extract datasets/JIRA.xml
 # Generate weak labels manually
 python << 'EOF'
 from src.pipeline import JIRAPipeline
@@ -328,5 +328,5 @@ EOF
 
 **Command to run:**
 ```bash
-export WEAK_LABEL_APPROVAL=manual && python -m src.cli.dev full raw-dataset/JIRA.xml
+export WEAK_LABEL_APPROVAL=manual && python -m src.cli.dev full datasets/JIRA.xml
 ```
