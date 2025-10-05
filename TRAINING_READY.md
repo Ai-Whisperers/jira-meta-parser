@@ -211,7 +211,8 @@ Before running training:
 
 ### Step 1: Run Basic Training
 ```bash
-cd "H:/workbench/PERSONAL CORPUS/AI WHISPERERS CORPORA/AI WHISPERERS REPOS/jira-analyzer/jira-ticket-meta-parser"
+# Navigate to your repository root directory
+cd /path/to/jira-ticket-meta-parser
 
 export WEAK_LABEL_APPROVAL=manual
 
