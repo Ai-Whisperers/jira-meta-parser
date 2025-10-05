@@ -266,6 +266,53 @@ guardrails:
       action: "..."
 ```
 
+### Configuration Optimization Workflow
+
+**⚠️ CRITICAL:** Always analyze your data before training!
+
+**The default configuration is optimized for 602-issue dataset analysis. Your data WILL differ.**
+
+**Step-by-step optimization:**
+
+1. **Run data analysis:**
+   ```python
+   from collections import Counter
+   import xml.etree.ElementTree as ET
+
+   # Analyze priority/status distributions
+   tree = ET.parse('your_data.xml')
+   items = tree.getroot().findall('.//item')
+
+   priorities = Counter(i.findtext('priority') for i in items)
+   statuses = Counter(i.findtext('status') for i in items)
+
+   # Check for skew
+   print(f"Priority variance: {max(priorities.values()) / len(items)}")
+   print(f"Status coverage: {len(statuses)}")
+   ```
+
+2. **Adjust weak labeling weights** based on variance:
+   - High variance (good spread) → increase weight
+   - Low variance (90%+ same value) → decrease weight
+   - Hygiene typically has best differentiation
+
+3. **Map ALL status values** from your export:
+   ```yaml
+   status_scores:
+     "status_from_export_1": 4.0
+     "status_from_export_2": 3.0
+     # Every status must be mapped!
+   ```
+
+4. **Validate configuration:**
+   ```bash
+   export WEAK_LABEL_APPROVAL=manual
+   python -m src.cli.dev full your_data.xml
+   # Review score distribution before proceeding
+   ```
+
+**See `local-reports/DATA_ANALYSIS_REPORT.md` for example analysis and recommendations.**
+
 ---
 
 ## Performance Optimizations

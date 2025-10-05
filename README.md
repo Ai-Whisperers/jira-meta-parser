@@ -126,11 +126,51 @@ jira-ticket-meta-parser/
 
 All parameters are managed via `config/default.yaml`. **No hardcoding.**
 
+### ⚠️ Important: Data-Driven Configuration
+
+**The default configuration is optimized for the included 602-issue dataset.** If using your own JIRA data, analyze it first:
+
+```bash
+# Generate data analysis report
+python -c "from local-reports import DATA_ANALYSIS_REPORT"  # See report for your data
+```
+
+**Key optimization learnings from dataset analysis:**
+
+1. **Adjust weak labeling weights** based on your data variance:
+   - If priority is uniform (90% same value) → reduce `priority_weight`
+   - If status has good coverage → increase `status_weight`
+   - Hygiene usually has best differentiation → increase `hygiene_weight`
+
+2. **Map ALL status values** from your JIRA export to avoid unmapped defaults
+
+3. **Update CSV column mapping** for custom fields (Story Points, Epic Name, etc.)
+
+**Current optimized config (based on 602-issue analysis):**
+```yaml
+ranker:
+  weak_labels:
+    priority_weight: 0.2  # Reduced - 90% Medium priority
+    status_weight: 0.4    # Increased - full coverage
+    hygiene_weight: 0.4   # Increased - high variance
+    status_scores:
+      "in progress": 4.0
+      "deploy": 4.0
+      "user testing": 3.5
+      "approved to start": 3.0
+      "in evaluation": 2.5
+      "backlog": 2.0
+      "rejected": 1.0
+      "blocked": 1.0
+      "done": 0.0
+```
+
 ### Key Sections
 
 **Validator:**
 - Key regex, date formats, required fields
 - Link integrity policy
+- CSV column mapping (update for your export format!)
 
 **Features:**
 - Text cleaning, categorical fields
@@ -146,6 +186,12 @@ All parameters are managed via `config/default.yaml`. **No hardcoding.**
 **Ranker (LambdaMART):**
 - Objective, metric, hyperparameters
 - Grouping strategy (epic/sprint)
+- **Weak labels:** Priority/status/hygiene weights + scoring maps
+
+**Preprocessing (Data Augmentation):**
+- Augmentation factor (1-5x dataset expansion)
+- Text perturbation, priority shuffle, status variation
+- Output directory for synthetic variations
 
 **Re-ranker (ColBERT):**
 - Enabled/disabled

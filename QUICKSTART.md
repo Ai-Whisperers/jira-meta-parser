@@ -124,6 +124,54 @@ EMBEDDINGS:
 
 Edit `config/default.yaml` to customize:
 
+### ⚡ FIRST: Optimize for Your Data
+
+**IMPORTANT:** The default config is tuned for the included 602-issue dataset. For your own data:
+
+**Step 1 - Analyze your data distribution:**
+```bash
+# Check priority/status/type distributions
+python << 'EOF'
+import xml.etree.ElementTree as ET
+from collections import Counter
+
+tree = ET.parse('your_export.xml')
+items = tree.getroot().findall('.//item') or tree.getroot().findall('.//issue')
+
+priorities = Counter(item.findtext('priority', '').strip() for item in items)
+statuses = Counter(item.findtext('status', '').strip() for item in items)
+
+print("Priorities:", dict(priorities))
+print("Statuses:", dict(statuses))
+EOF
+```
+
+**Step 2 - Adjust weak labeling weights:**
+```yaml
+ranker:
+  weak_labels:
+    # If one field is uniform (90%+ same value) → reduce weight
+    # If one field has good spread → increase weight
+    priority_weight: 0.2  # Example: 90% Medium priority
+    status_weight: 0.4    # Example: Good status diversity
+    hygiene_weight: 0.4   # Usually has best variance
+```
+
+**Step 3 - Map ALL your status values:**
+```yaml
+ranker:
+  weak_labels:
+    status_scores:
+      # Add EVERY status from your export!
+      "your_status_1": 4.0
+      "your_status_2": 3.0
+      # ... etc
+```
+
+**See `local-reports/DATA_ANALYSIS_REPORT.md` for full optimization guide.**
+
+---
+
 ### Adjust for GPU (Faster)
 
 ```yaml
@@ -150,6 +198,16 @@ reranker:
   enabled: true
   top_k: 50
 ```
+
+### Enable Data Augmentation
+
+```yaml
+preprocessing:
+  enabled: true
+  augmentation_factor: 2  # 2x-5x dataset size
+```
+
+**Use with:** `export AUGMENTATION_FACTOR=3`
 
 ---
 
