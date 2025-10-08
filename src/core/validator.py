@@ -146,7 +146,7 @@ class BackboneValidator:
                     "dates_ok": flags["dates_ok"],
                     "link_ref_errors": flags["link_ref_errors"],
                     "parent_ok": flags["parent_ok"],
-                    "summary": row.get("summary", "")[:100],  # Truncate for report
+                    "summary": (row.get("summary") or "")[:100],  # Truncate for report
                     "type": row.get("type"),
                     "status": row.get("status"),
                     "priority": row.get("priority"),

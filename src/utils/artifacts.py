@@ -26,6 +26,7 @@ class ArtifactManager:
         self.dirs = {
             "validation": self.base_dir / "validation",
             "features": self.base_dir / "features",
+            "labels": self.base_dir / "labels",
             "embeddings": self.base_dir / "embeddings",
             "indices": self.base_dir / "indices",
             "models": self.base_dir / "models",

@@ -1,7 +1,7 @@
 """Embedding generation using sentence-transformers (all-MiniLM-L6-v2)."""
 
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import numpy as np
 import pandas as pd

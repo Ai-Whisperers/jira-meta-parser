@@ -68,6 +68,10 @@ class JIRAPipeline:
         Returns:
             Final ranked backlog DataFrame
         """
+        # Detect format if auto
+        if input_format == "auto":
+            input_format = "xml" if input_path.endswith(".xml") else "csv"
+
         self.logger.info("Starting pipeline", input_path=input_path, format=input_format)
 
         # Stage 1: Validation
