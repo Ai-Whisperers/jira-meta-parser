@@ -9,6 +9,62 @@ Transforms chaotic JIRA exports into clean, deterministically ordered backlogs u
 - **Learning-to-rank** (LightGBM LambdaMART)
 - **Optional re-ranking** (ColBERT-v2)
 
+"  💡 The Real Innovation Here
+
+  Not in the models (standard pre-trained + LightGBM)
+
+  Innovation is in the pipeline:
+  1. Weak Labeling: No ground truth needed
+  2. Hybrid Features: Semantic (embeddings) + Metadata (structured)
+  3. Streaming Architecture: O(n) complexity for large datasets
+  4. Configuration-Driven: Zero hardcoding
+  5. Reproducibility: Benchmarking built-in
+
+  Use Case:
+  - PM exports 602 tickets from JIRA
+  - Runs pipeline (5-10 min)
+  - Gets ranked backlog (top 20 tickets to work on)
+  - Reviews, adjusts config, re-trains
+  - Iterates until ranking matches intuition
+
+  ---
+  🤔 Why Not Just Use Weak Labels?
+
+  Good Question! If weak labels already rank tickets, why train a model?
+
+  Answer:
+  1. Pattern Discovery: Model finds correlations weak labels miss
+    - "Tickets with 'API' in title rank higher"
+    - "Certain assignees' work is more urgent"
+  2. Feature Interaction: Learns complex combinations
+    - "High priority + missing story points = lower"
+    - "Bug + specific component = critical"
+  3. Semantic Understanding: Uses embeddings to go beyond keywords
+    - "Database optimization" ≈ "performance improvement"
+  4. Generalization: Learns project-specific patterns
+    - Your team's priorities ≠ generic heuristics
+
+  ---
+  Summary
+
+  Models We Train: Just LightGBM LambdaMART (500 decision trees)
+
+  Time: 1-2 minutes of the 5-10 min pipeline
+
+  Purpose: Learn to rank JIRA tickets by combining:
+  - Pre-trained semantic embeddings (features)
+  - Metadata (features)
+  - Weak labels (training signal)
+
+  Output: Prioritized backlog for product managers
+
+  It's NOT:
+  - Fine-tuning transformers
+  - Training embeddings from scratch
+  - Deep learning (it's gradient boosting)
+  - Multi-hour/day training (it's minutes)
+"
+
 ---
 
 ## Quick Start
