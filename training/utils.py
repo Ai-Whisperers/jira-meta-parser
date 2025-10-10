@@ -130,14 +130,16 @@ def compute_ranking_metrics(
         y_true_group = y_true[start_idx:end_idx]
         y_pred_group = y_pred[start_idx:end_idx]
 
-        score = ndcg_score(
-            y_true_group.reshape(1, -1),
-            y_pred_group.reshape(1, -1),
-        )
-        ndcg_all.append(score)
+        # Skip groups with only 1 document (NDCG undefined)
+        if len(y_true_group) > 1:
+            score = ndcg_score(
+                y_true_group.reshape(1, -1),
+                y_pred_group.reshape(1, -1),
+            )
+            ndcg_all.append(score)
         start_idx = end_idx
 
-    metrics["ndcg"] = np.mean(ndcg_all)
+    metrics["ndcg"] = np.mean(ndcg_all) if ndcg_all else 0.0
 
     # Spearman correlation (measure rank correlation)
     from scipy.stats import spearmanr

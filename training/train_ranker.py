@@ -350,7 +350,28 @@ def main(artifacts_dir, config, output_dir):
     X, groups = trainer.prepare_features(features_df, embeddings_df, validation_df)
 
     # Get labels
-    y = weak_labels_df["relevance_score"].values
+    y_continuous = weak_labels_df["relevance_score"].values
+
+    # Convert continuous scores to integer grades for LambdaRank
+    # LambdaRank requires integer labels (0, 1, 2, 3) that map to label_gain
+    click.echo("\nConverting continuous weak labels to discrete grades...")
+    click.echo(f"Original range: [{y_continuous.min():.3f}, {y_continuous.max():.3f}]")
+
+    # Use quartile-based binning for balanced distribution
+    q1 = np.percentile(y_continuous, 25)
+    q2 = np.percentile(y_continuous, 50)
+    q3 = np.percentile(y_continuous, 75)
+
+    y = np.zeros(len(y_continuous), dtype=np.int32)
+    y[y_continuous <= q1] = 0  # Low relevance
+    y[(y_continuous > q1) & (y_continuous <= q2)] = 1  # Medium relevance
+    y[(y_continuous > q2) & (y_continuous <= q3)] = 2  # High relevance
+    y[y_continuous > q3] = 3  # Very high relevance
+
+    # Show distribution
+    unique, counts = np.unique(y, return_counts=True)
+    click.echo(f"Grade distribution: {dict(zip(unique, counts))}")
+    click.echo(f"Quartile thresholds: Q1={q1:.3f}, Q2={q2:.3f}, Q3={q3:.3f}\n")
 
     # Split data
     splits = trainer.split_data(X, y, groups, features_df)
